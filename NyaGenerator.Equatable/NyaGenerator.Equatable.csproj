@@ -6,17 +6,21 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.5.0" PrivateAssets="all" />
 		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" PrivateAssets="all" />
+        <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 	</ItemGroup>
 
 	<PropertyGroup>
-		<AssemblyVersion>1.0.0</AssemblyVersion>
-		<FileVersion>1.0.0</FileVersion>
-		<Version>1.0.0</Version>
+		<AssemblyVersion>1.0.1</AssemblyVersion>
+		<FileVersion>1.0.1</FileVersion>
+		<Version>1.0.1</Version>
 		<Authors>Chawol</Authors>
 		<PackageId>NyaGenerator.Equatable</PackageId>
 		<PackageProjectUrl>https://github.com/chawolbaka/NyaGenerator</PackageProjectUrl>
 		<PackageTags>Generator Equatable</PackageTags>
 		<Copyright>Copyright (c) 2023 Chawol</Copyright>
+		<NoPackageAnalysis>true</NoPackageAnalysis>        
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
 	</PropertyGroup>
 	
 </Project>
